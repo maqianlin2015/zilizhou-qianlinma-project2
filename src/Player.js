@@ -2,6 +2,7 @@ import { GameBoard as Board } from './Battleships';
 import { makeSmartAIMove, makeRandomAIMove } from './helperFunctions';
 
 export const Player = (name, side, type = 'human', gameBoard) => {
+	//测试
 	const player = {
 		name,
 		side,
