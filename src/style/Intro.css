@@ -12,7 +12,7 @@
   justify-content: center;
   position: relative;
   height: 600px;
-  color: #fffd6d;
+  color: black;
   font-family: 'Pathway Gothic One', sans-serif;
   font-size: 400%;
   font-weight: 600;
@@ -20,6 +20,7 @@
   line-height: 100%;
   perspective: 200px;
   text-align: justify;
+  margin-top: 100px;
 }
 
 .crawl  {
@@ -40,6 +41,16 @@
 
 .p-center {
   text-align: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 500px;
+}
+
+#divider{
+  width: 20px;
 }
 /* 
 @keyframes crawl  {

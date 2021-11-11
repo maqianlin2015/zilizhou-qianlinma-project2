@@ -13,7 +13,8 @@ const App = () => {
 	const [winner, setWinner] = useState(null);
 	let PlayerOne = CreatePlayer('human-player', 'human');
 	let PlayerTwo = CreatePlayer('ai-player', 'computer');
-	let timeout = 2000;
+	//update timeout from 2000 to 20//
+	let timeout = 20;
 
 	return (
 		<div>
