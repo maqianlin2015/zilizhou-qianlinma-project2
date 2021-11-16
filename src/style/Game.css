@@ -10,7 +10,7 @@
 .side-title {
   padding: 20px;
   text-align: center;
-  font-family: "Star Jedi", Quicksand;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 2rem;
 }
 
@@ -34,9 +34,9 @@
   float: left;
 }
 
-.dark.grid-wrapper {
+/* .dark.grid-wrapper {
   cursor: crosshair;
-}
+} */
 
 .column-description {
   width: 100%;
@@ -52,7 +52,7 @@
 
 .inner-wrapper .row-description {
   /* position: ; */
-  float: left;
+  /* float: right; */
   display: inline-grid;
   margin-right: 5%;
 }
@@ -60,13 +60,13 @@
 .numbers,
 .letters {
   text-align: center;
-  font-family: "Star Jedi", Quicksand;
+  font-family: Arial, Helvetica, sans-serif;
   padding: 5px;
 }
 
-.dark.row-description {
+/* .dark.row-description {
   float: right;
-}
+} */
 
 .cell {
   background-color: lightgray;
@@ -122,10 +122,12 @@
 .dark.grid-wrapper {
   box-shadow: 0px 0px 15px red;
 } */
-
+/* 
 .dark .board-wrapper {
   transform: scale(1.05);
-}
+} */
+
+
 
 .ship-img {
   overflow: hidden;
@@ -176,6 +178,7 @@
   flex-wrap: wrap;
   display: inline-block;
   overflow: hidden;
+ 
 }
 
 .button-container {

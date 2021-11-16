@@ -4,7 +4,7 @@
   font-family: 'Star Jedi Hollow';
   src:  url('./fonts/StarJediHollow.ttf') format('truetype'),
 } */
-@font-face {
+/* @font-face {
   font-family: 'StarJedi';
   src: url('../style/fonts/new/StarJedi.ttf') format('woff2'),
       url('../style/fonts/new/StarJedi.woff') format('woff'),
@@ -22,7 +22,7 @@
   font-weight: normal;
   font-style: normal;
   font-display: swap;
-}
+} */
 
 header {
   color: rgb(255, 255, 255);
@@ -37,7 +37,7 @@ header {
 }
 
 .title-main {
-  font-family: 'Star Jedi Hollow', Quicksand;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 3rem;
   text-shadow: 0px 0px 5px greenyellow;
 }
@@ -61,13 +61,13 @@ html {
   background-color: rgb(139, 136, 130);
 }
 
-.gh-btn:hover {
+/* .gh-btn:hover {
   -moz-animation: button-twink 1s linear infinite;
   -ms-animation: button-twink 1s linear infinite;
   -o-animation: button-twink 1s linear infinite;
   -webkit-animation: button-twink 1s linear infinite;
   animation: button-twink 1s linear infinite;
-}
+} */
 
 .svg-inline--fa {
   vertical-align: 0.125em;
@@ -181,13 +181,13 @@ html {
   border: 2px double white;
   border-radius: 5px;
   color: black;
-  font-family: 'Star Jedi', Quicksand;
+  font-family: Arial, Helvetica, sans-serif;
   /* transition: all 0.5s; */
   padding: 10px;
 }
 
 .star-btn:hover {
-  box-shadow: 0px 0px 30px lightskyblue;
+  box-shadow: 0px 0px 30px orange;
 }
 
 .announcer {
@@ -205,15 +205,15 @@ html {
 
 .announcer h1 {
   padding: 10px 10px 20px 10px;
-  text-shadow: 0px 0px 15px lime;
-  font-family: 'Star Jedi', Quicksand;
+  text-shadow: 0px 0px 15px orange;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.announcer.dark h1 {
+/* .announcer.dark h1 {
   text-shadow: 0px 0px 15px rgb(199, 35, 35);
   padding: 20px;
-}
-
+} */
+/* 
 .img-wrapper {
   width: 460px;
   height: 250px;
@@ -221,20 +221,20 @@ html {
   justify-self: center;
   margin: auto;
   margin-bottom: 55px;
-}
+} */
 
-.img-wrapper.light {
+/* .img-wrapper.light {
   margin-top: -80px;
   background-image: url(./yoda.gif);
 }
 
 .img-wrapper.dark {
   background-image: url(./lose.gif);
-}
+} */
 
-@keyframes button-twink {
+/* @keyframes button-twink {
   from {
-    box-shadow: 0px 0px 0px greenyellow;
+    box-shadow: 0px 0px 15px greenyellow;
   }
   to {
     box-shadow: 0px 0px 15px greenyellow;
@@ -266,7 +266,7 @@ html {
   to {
     box-shadow: 0px 0px 15px greenyellow;
   }
-}
+} */
 
 .trans-enter {
   opacity: 0;
