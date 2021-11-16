@@ -112,6 +112,12 @@ html {
   font-size: 2rem;
   width: 500px;
   height: 10%;}
+
+  .new-game-btn {
+    margin-top: 30%;
+    margin-left: 45%;
+    font-size: 2rem;  
+  }
  
 
 .buttons{
