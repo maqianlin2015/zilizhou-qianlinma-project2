@@ -89,20 +89,6 @@ html {
   transform: translate(-50%, -50%);
 }
 
-/* .new-game-wrapper {
-  background-image: url(./x-wing2.gif);
-  background-origin: center;
-  background-position: center;
-  width: 250px;
-  height: 250px;
-  border-radius: 400px;
-  -moz-box-shadow: inset 0 0 10px #000000;
-  -webkit-box-shadow: inset 0 0 10px #000000;
-  box-shadow: inset 0 0 80px #000000, inset 0 0 10px 20px #000000;
-} */
-
-/* .new-game-btn, */
-
 .start-game-btn {
   /* justify-self: center; */
   /* position: absolute !important; */
@@ -221,14 +207,6 @@ html {
   margin-bottom: 55px;
 } */
 
-/* .img-wrapper.light {
-  margin-top: -80px;
-  background-image: url(./yoda.gif);
-}
-
-.img-wrapper.dark {
-  background-image: url(./lose.gif);
-} */
 
 /* @keyframes button-twink {
   from {

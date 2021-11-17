@@ -177,10 +177,6 @@
   transform: translate(0%, 52%) scale(0.33) rotate(90deg);
 }
 
-.flame-gif {
-  z-index: 9;
-}
-
 .light .cell .hit-png {
   filter: hue-rotate(110deg);
 } */

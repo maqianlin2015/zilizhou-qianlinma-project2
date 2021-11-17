@@ -6,7 +6,7 @@ import GameBoard from './GameBoard';
 
 const FreePlayerGame = (props) => {
 	const { player, opponent } = props;
-	const [isGameReady, setGameReady] = useState(false);
+	const [isGameReady, setGameReady] = useState(true);
 	const [board, setBoard] = useState([...player.gameBoard.board]);
 	const [opponentBoard, setOpponentBoard] = useState([
 		...opponent.gameBoard.board,
@@ -22,40 +22,6 @@ const FreePlayerGame = (props) => {
 	useEffect(() => {
 		handleComputerShipDisplay();
 	}, [EnemyShipCount]);
-
-	const onPlaceRandomly = () => {
-		onResetBoard();
-		player.gameBoard.placeShipsAtRandom();
-		setBoard([...player.gameBoard.board]);
-	};
-
-	const onFlipShips = () => {
-		player.gameBoard.ships.forEach((ship) => {
-			if (!ship.onBoard) player.gameBoard.changeShipDirection(ship);
-		});
-		setBoard([...player.gameBoard.board]);
-		document.querySelector('.ship-wrapper').classList.toggle('flipped');
-	};
-
-	const onResetBoard = () => {
-		player.gameBoard.makeBoard();
-		player.gameBoard.getShips();
-		setBoard([...player.gameBoard.board]);
-	};
-
-	const onPlaceShip = (e) => {
-		const y = e.target.dataset.cord.split(',')[0];
-		const x = e.target.dataset.cord.split(',')[1];
-		const shipID = e.dataTransfer.getData('ship');
-		const ship = player.gameBoard.ships[shipID - 1];
-		player.gameBoard.placeShip(ship, x, y);
-		// console.table(board);
-		setBoard([...player.gameBoard.board]);
-	};
-
-	const onStartGame = () => {
-		if (player.gameBoard.isReady) setGameReady(true);
-	};
 
 	const onMakeMove = (e) => {
 		const y = e.target.dataset.cord.split(',')[0];
@@ -122,9 +88,7 @@ const FreePlayerGame = (props) => {
 
 	return (
 		<div>
-			{isGameReady ? (
 				<div className="game">
-					<GameBoard player={player} board={board} isGameReady={isGameReady} />
 					<GameBoard
 						player={opponent}
 						board={opponentBoard}
@@ -132,21 +96,6 @@ const FreePlayerGame = (props) => {
 						isGameReady={isGameReady}
 					/>
 				</div>
-			) : (
-				<div className="game">
-					<GameBoard
-						player={player}
-						board={board}
-						isGameReady={isGameReady}
-						setGameReady={setGameReady}
-						onFlipShips={onFlipShips}
-						onPlaceShip={onPlaceShip}
-						onPlaceRandomly={onPlaceRandomly}
-						onResetBoard={onResetBoard}
-						onStartGame={onStartGame}
-					/>
-				</div>
-			)}
 		</div>
 	);
 };
