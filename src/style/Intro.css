@@ -44,12 +44,21 @@
   font-size: 20px;
 }
 
-.p-center {
+.click-start-game-btn {
   text-align: center;
-  color: brown;
+  color: black;
   background-color: rgb(247, 199, 140);
+  margin-left: 43%;
+  width: 300px;;
+  border: 2px solid;
+  font-size: 25px;
 }
 
+.click-start-game-btn:hover{
+  background-color: rgb(223, 117, 117);
+  color:white;
+  border: 0;
+}
 
 
 .neon-btn {
