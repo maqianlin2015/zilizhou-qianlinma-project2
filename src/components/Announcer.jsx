@@ -10,8 +10,6 @@ const Announcer = ({ winner, setAppStatus }) => {
 		<div>
 			<div className={`announcer ${winner.side}`}>
 				<h1>Game Over! {winner.name} Won!</h1>
-				{winner.side === 'human-player'}
-				{winner.side === 'ai-player'}
 			</div>
 
 			<button className="new-game-btn star-btn" onClick={onPlayAgain}>
