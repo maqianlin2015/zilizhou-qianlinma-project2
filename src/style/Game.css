@@ -1,6 +1,7 @@
 .game {
+  background-color:rgb(124, 158, 250);
   position: relative;
-  height: 90vh;
+  height: 100vh;
   padding: 0px;
   margin: 0px;
   display: flex;
@@ -21,10 +22,10 @@
 
 
 .grid-wrapper {
-  margin: 0px;
-  padding: 0px;
+  margin: 10px;
+  padding: 10px;
   border: 2px white;
-  height: 25rem;
+  /* height: 25rem; */
   width: 25rem;
   position: relative;
   display: grid;
@@ -69,7 +70,7 @@
 } */
 
 .cell {
-  background-color: lightgray;
+  background-color: rgba(187, 178, 178, 0.3);
   border: 0.1rem solid rgb(0, 0, 0);
   display: flex;
   justify-content: center;
@@ -84,10 +85,10 @@
 
 .grid-wrapper.computer .cell:hover {
   transform: scale(1.1);
-  box-shadow: inset 0px 0px 10px lightgray;
+  box-shadow: inset 0px 0px 10px rgb(218, 233, 7);
 }
 .cell.droppable.hover {
-  box-shadow: inset 0px 0px 10px rgb(157, 255, 0);
+  box-shadow: inset 0px 0px 10px red;
 
 }
 
@@ -100,7 +101,7 @@
 }
 
 .cell.ship {
-  background: rgba(123, 221, 66, 0.2);
+  background: rgba(14, 0, 14, 1);
 }
 
 .cell.hit img {
@@ -138,6 +139,26 @@
   overflow: hidden;
 }
 
+.size2 {
+  width:100px;
+  height:50px;
+}
+
+.size3 {
+  width:150px;
+  height:50px;
+}
+
+.size4 {
+  width:200px;
+  height:50px;
+}
+
+.size5 {
+  width:250px;
+  height:50px;
+}
+
 .ship-img.vertical {
   transform: rotate(0.5deg);
 }
@@ -160,7 +181,7 @@
   z-index: 9;
 }
 
-/* .light .cell .flame-gif {
+.light .cell .hit-png {
   filter: hue-rotate(110deg);
 } */
 

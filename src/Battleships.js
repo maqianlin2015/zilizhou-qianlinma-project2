@@ -9,7 +9,7 @@ import {
 
 const BOARD_SIDE_SIZE = 10;
 // 之后这里改成5！别忘了
-const FLEET_QUANTITY = 4;
+const FLEET_QUANTITY = 5;
 
 export const Ship = (name = 'ship', size = 1, direction = 'horizontal') => {
 	const ship = {
@@ -63,8 +63,7 @@ export const GameBoard = (playerSide = 'human-player') => {
 					Ship('Star Destroyer', 3),
 					Ship('Star Destroyer', 3),
 					Ship('Super Star Destroyer', 4),
-					// 没有合适的size5 ship，就先不放，之后加
-					// Ship('TIE-bomber', 5)
+					Ship('TIE-bomber', 5)
 				];
 			} else {
 				return [
@@ -72,7 +71,7 @@ export const GameBoard = (playerSide = 'human-player') => {
 					Ship('Shuttle', 3),
 					Ship('Shuttle', 3),
 					Ship('CR90 corvette', 4),
-					// Ship('MC80 Star Cruiser', 5),
+					Ship('MC80 Star Cruiser', 5),
 				];
 			}
 		},

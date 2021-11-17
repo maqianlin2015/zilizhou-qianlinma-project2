@@ -1,23 +1,22 @@
 .fade {
+  background-color: rgb(124, 158, 250);
   position: relative;
   width: 100%;
-  min-height: 60vh;
-  top: 5vh;
-  z-index: 6;
-  overflow: scroll;
+  /* min-height: 60vh; */
+  /* top: 5vh; */
+  /* z-index: 6; */
+  overflow: hidden;
 }
 
 .star-wars-intro {
   display: flex;
   justify-content: center;
   position: relative;
-  height: 500px;
+  /* height: 600px; */
   color: black;
-  /* font-family: 'Pathway Gothic One', sans-serif; */
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 400%;
-  font-weight:500;
-  letter-spacing: 3px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: 180%;
+  font-weight: 300;
   line-height: 100%;
   perspective: 20px;
   /* text-align: justify; */
@@ -47,21 +46,43 @@
 
 .p-center {
   text-align: center;
+  color: brown;
+  background-color: rgb(247, 199, 140);
 }
 
-.click-to-the-game-btn{
-  margin-left: 45%;
-  text-align: center;
-}
 
-.click-to-the-game-btn :hover{
-  background-color: darkgray;
-}
 
-.buttons {
+.neon-btn {
   display: flex;
-  justify-content: center;
-  margin-top: 500px;
+  align-items: center;
+  justify-content: space-around;
+  height: 100vh;
+  background: rgb(124, 158, 250);
+}
+
+.btn {
+  width: 300px;;
+  border: 2px solid;
+  background-color: transparent;
+  font-size: 25px;
+  padding: 15px 20px;
+}
+
+.one {
+  background-color:rgb(247, 199, 140);
+  color: black
+}
+
+.btn:hover {
+  color: white;
+  border: 0;
+}
+
+.one:hover {
+  background-color:rgb(223, 117, 117);
+  -webkit-box-shadow: 10px 10px 99px 6px rgba(76,201,240,1);
+  -moz-box-shadow: 10px 10px 99px 6px rgba(76,201,240,1);
+  box-shadow: 10px 10px 99px 6px rgba(76,201,240,1);
 }
 
 #divider{
@@ -79,4 +100,8 @@
     top: -6000px;
     transform: rotateX(25deg) translateZ(-2500px);
   }
+} */
+
+/* .trans {
+  background-color: rgb(124, 158, 250);
 } */

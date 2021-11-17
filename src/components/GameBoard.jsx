@@ -6,22 +6,22 @@ const GameBoard = (props) => {
 	const { player, board, isGameReady } = props;
 	return (
 		<div className={`${player.side} game-board`}>
-			<div className={`${player.side} side-title`}>The {player.side} side</div>
+			<div className={`${player.side} side-title`}>Please Place Your Ships</div>
 			<div className="outer-wrapper">
 				{/* {BOARD} */}
 				<div className="board-wrapper">
 					<div className="column-description">
-						{board.map((arr, i) => {
+						{/* {board.map((arr, i) => {
 							return (
 								<div className="numbers" key={[i + 1]}>
 									{' '}
 									{[i + 1]}{' '}
 								</div>
 							);
-						})}
+						})} */}
 					</div>
 					<div className="inner-wrapper">
-						<div className={`${player.side} row-description`}>
+						{/* <div className={`${player.side} row-description`}>
 							{' '}
 							{board.map((arr, i) => {
 								return (
@@ -31,7 +31,7 @@ const GameBoard = (props) => {
 									</div>
 								);
 							})}
-						</div>
+						</div> */}
 						{/* grid */}
 						<div className={`${player.side} grid-wrapper ${player.type}`}>
 							{player.gameBoard.board.map((arr, j) =>
@@ -96,8 +96,8 @@ const GameBoard = (props) => {
 													key={[j + 1, i + 1]}
 												>
 													<img
-														className={`flame-gif`}
-														src={process.env.PUBLIC_URL + '/images/flame.gif'}
+														className={`hit-png `}
+														src={process.env.PUBLIC_URL + '/images/hit.png'}
 														alt="flames"
 													/>
 												</div>
@@ -134,8 +134,8 @@ const GameBoard = (props) => {
 													key={[j + 1, i + 1]}
 												>
 													<img
-														className={`flame-gif`}
-														src={process.env.PUBLIC_URL + '/images/flame.gif'}
+														className={`hit-png `}
+														src={process.env.PUBLIC_URL + '/images/hit.png'}
 														alt="as"
 													/>
 												</div>
@@ -178,7 +178,7 @@ const GameBoard = (props) => {
 											key={`ship${ship.id}`}
 										>
 											<img
-												className={`ship-img ${ship.direction}`}
+												className={`ship-img ${ship.direction} size${ship.size}` }
 												src={
 													process.env.PUBLIC_URL +
 													`/images/${player.side}${ship.size}.png`
@@ -205,7 +205,7 @@ const GameBoard = (props) => {
 						className="start-game-btn star-btn"
 						onClick={props.onStartGame}
 					>
-						Start Game
+						Play
 					</button>
 				</div>
 			)}

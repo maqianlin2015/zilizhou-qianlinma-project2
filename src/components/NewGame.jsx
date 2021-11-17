@@ -14,23 +14,17 @@ const NewGame = ({ setAppStatus, setWinner }) => {
 	};
 
 	return (
-		<div>
-			{/* <div className="new-game">
-				<div className="new-game-wrapper"></div>
-			</div> */}
-			{/* <button className="new-game-btn star-btn" onClick={onStartGame}> */
-			/*添加了div classname buttons和对应的intro.css style*/}
-			<div className="buttons">
-			<button className="normal-game-btn" onClick={onStartNormalGame}>
-				Normal Game
-			</button>
-			{/*add space between two buttons*/}
-			<div id="divider" />
-			{/* <button className="start-free-player-game-btn star-btn" onClick={onStartGame}> */}
-			<button className="free-player-game-btn" onClick={onStartFreePlayerGame}>
-				{/* free player btn 还没有对应的comp+func，写完了normal回来改 */}
-				Free Player Game
-			</button>
+		<div className="neon-btn">
+			<div className="">
+				<button className="btn one" onClick={onStartNormalGame}>
+					Game
+				</button>
+				<div id="divider" />
+				<br/>
+				<br/>
+				<button className="btn one" onClick={onStartFreePlayerGame}>
+					Try Free Player Game
+				</button>
 			</div>
 		</div>
 	);

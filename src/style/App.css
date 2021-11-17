@@ -24,6 +24,7 @@
   font-display: swap;
 } */
 
+
 header {
   color: rgb(255, 255, 255);
   position: relative;
@@ -77,10 +78,10 @@ html {
 .announcer {
   z-index: 10;
   color: black;
-  position: absolute;
-  top: 50vh;
+  position: absolute; 
+   top: 50vh;
   left: 50vw;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); 
   text-align: center;
 }
 
@@ -187,30 +188,27 @@ html {
 }
 
 .star-btn:hover {
-  box-shadow: 0px 0px 30px orange;
+  box-shadow: 0px 0px 30px rgb(207, 126, 5);
 }
+
 
 .announcer {
-  background-color: white;
-  border: 5px solid white;
+  background-color: rgb(13, 148, 13);
   top: 45vh;
   border-radius: 50px;
-  width: 800px;
+  width: 600px;
 }
 
-.announcer.dark {
-  background-color: rgb(79, 80, 85);
-  box-shadow: 0px 0px 20px rgb(199, 35, 35), inset 0px 0px 50px black;
+.announcer.ai-player {
+  background-color: rgba(110, 24, 2, 0.8);
+
 }
 
 .announcer h1 {
   padding: 10px 10px 20px 10px;
-  text-shadow: 0px 0px 15px orange;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
-/* .announcer.dark h1 {
-  text-shadow: 0px 0px 15px rgb(199, 35, 35);
+.announcer.ai-player h1 {
   padding: 20px;
 } */
 /* 
