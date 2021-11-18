@@ -25,7 +25,6 @@
   margin: 10px;
   padding: 10px;
   border: 2px white;
-  /* height: 25rem; */
   width: 25rem;
   position: relative;
   display: grid;
@@ -34,10 +33,6 @@
   flex-wrap: wrap;
   float: left;
 }
-
-/* .dark.grid-wrapper {
-  cursor: crosshair;
-} */
 
 .column-description {
   width: 100%;
@@ -52,8 +47,6 @@
 }
 
 .inner-wrapper .row-description {
-  /* position: ; */
-  /* float: right; */
   display: inline-grid;
   margin-right: 5%;
 }
@@ -62,10 +55,6 @@
 .letters {
   text-align: center;
   font-family: Georgia, 'Times New Roman', Times, serif;}
-
-/* .dark.row-description {
-  float: right;
-} */
 
 .cell {
   background-color: rgba(187, 178, 178, 0.3);
