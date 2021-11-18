@@ -52,7 +52,7 @@ const Introduction = ({ setAppStatus }) => {
           <br></br>
           <br></br>
           <button className="click-start-game-btn" onClick={onSkipIntro}>
-            Click Screen to Start Game
+            Click Here to Start Game
           </button>
         </div>
       </section>

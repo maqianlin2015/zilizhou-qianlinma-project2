@@ -11,7 +11,7 @@
 .side-title {
   padding: 20px;
   text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 2rem;
 }
 
@@ -61,9 +61,7 @@
 .numbers,
 .letters {
   text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-  padding: 5px;
-}
+  font-family: Georgia, 'Times New Roman', Times, serif;}
 
 /* .dark.row-description {
   float: right;
@@ -107,32 +105,10 @@
 .cell.hit img {
   height: 30px;
 }
-/* 
-.light.side-title {
-  text-shadow: 0px 0px 15px lime;
-} */
-
-/* .dark.side-title {
-  text-shadow: 0px 0px 15px red;
-}
-
-.light.grid-wrapper {
-  box-shadow: 0px 0px 15px lime;
-}
-
-.dark.grid-wrapper {
-  box-shadow: 0px 0px 15px red;
-} */
-/* 
-.dark .board-wrapper {
-  transform: scale(1.05);
-} */
-
 
 
 .ship-img {
   overflow: hidden;
-  /* transform: scale(0.5); */
   width: 200px;
   cursor: grab;
   transition: all ease-out 0.5s;

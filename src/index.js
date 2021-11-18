@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './style/index.css';
-import './style/night-sky.css';
 import App from './App';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
