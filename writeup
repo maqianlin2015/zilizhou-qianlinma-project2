@@ -1,0 +1,21 @@
+•	What were some challenges you faced while making this app?
+
+We found it’s challenge for beginners start to code the game from scratch without stater code provided. 
+It is challenging and use React when not get familiar with JavaScript enough, and meanwhile to meet the 
+requirements on the assignment to use state management. Thinking about what components we will need and, 
+all the game logics and code them out are very challenging. 
+
+•	Given more time, what additional features, functional or design changes would you make
+
+Given more time, we would like to add features such as recording how many steps the player takes to hit 
+all the ships per round, and give the player a view based on the rank of the fewest steps taken for all 
+the rounds of games the player has played. 
+
+•	What assumptions did you make while working on this assignment?
+We made assumptions that the player can click and drag the boat on their own (which is a bonus point that 
+we write it in our code eventually), or they can place it randomly, horizontally/vertically. We also assume 
+that the we will have a local storage to store the state of the game after every action (which is another bonus 
+point we worked on). In addition, when the human player plays with AI player, the AI move can be either smart or not.
+
+•	How long did this assignment take to complete?
+20hrs and plus.
