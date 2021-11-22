@@ -4,7 +4,7 @@ const GameBoard = (props) => {
 	const { player, board, isGameReady } = props;
 	return (
 		<div className={`${player.side} game-board`}>
-			<div className={`${player.side} side-title`}>Please Place Your Ships</div>
+			<div className={`${player.side} side-title`}>{player.name} Board</div>
 			<div className="outer-wrapper">
 				{/* {BOARD} */}
 				<div className="board-wrapper">
