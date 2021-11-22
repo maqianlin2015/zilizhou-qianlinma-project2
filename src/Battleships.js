@@ -5,7 +5,7 @@ import {
 	markShipArea,
 	handleShipCount,
 	randomlyPlaceShip,
-} from './helperFunctions';
+} from './HelperFunctions';
 
 const BOARD_SIDE_SIZE = 10;
 const FLEET_QUANTITY = 5;

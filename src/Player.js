@@ -1,5 +1,5 @@
 import { GameBoard as Board } from './Battleships';
-import { makeSmartAIMove, makeRandomAIMove } from './helperFunctions';
+import { makeSmartAIMove, makeRandomAIMove } from './HelperFunctions';
 
 export const Player = (name, side, type = 'human', gameBoard) => {
 
