@@ -142,9 +142,6 @@ const GameBoard = (props) => {
 							<button className="star-btn" onClick={props.onResetBoard}>
 								Reset Board
 							</button>
-							<button className="star-btn" onClick={props.onFlipShips}>
-								Flip Ships
-							</button>
 						</div>
 						<div className="ship-wrapper">
 							{player.gameBoard.ships.map((ship) => {

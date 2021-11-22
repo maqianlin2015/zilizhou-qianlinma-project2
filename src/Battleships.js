@@ -78,15 +78,9 @@ export const GameBoard = (playerSide = 'human-player') => {
 			const shipArray = gameBoard.createShips();
 			shipArray.map((ship, id) => (ship.id = id + 1));
 			gameBoard.ships = shipArray;
-			// console.log(gameBoard.ships);
 			return shipArray;
 		},
 
-		changeShipDirection: (ship = {}) => {
-			ship.direction === 'horizontal' && ship.size > 1
-				? (ship.direction = 'vertical')
-				: (ship.direction = 'horizontal');
-		},
 
 		receiveAttack: (xCord, yCord) => {
 			const val = gameBoard.board[yCord - 1][xCord - 1];

@@ -129,7 +129,6 @@ const randomlyPlaceShip = (ship = {}, gameBoard, boardSize) => {
 	if (ship.onBoard !== true) {
 		const randX = Math.ceil(Math.random() * boardSize);
 		const randY = Math.ceil(Math.random() * boardSize);
-		if (Math.random() * 2 > 1) gameBoard.changeShipDirection(ship);
 		gameBoard.placeShip(ship, randX, randY);
 		randomlyPlaceShip(ship, gameBoard, boardSize);
 	}

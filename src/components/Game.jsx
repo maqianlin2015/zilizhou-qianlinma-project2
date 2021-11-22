@@ -33,14 +33,6 @@ const Game = (props) => {
 		setBoard([...player.gameBoard.board]);
 	};
 
-	const onFlipShips = () => {
-		player.gameBoard.ships.forEach((ship) => {
-			if (!ship.onBoard) player.gameBoard.changeShipDirection(ship);
-		});
-		setBoard([...player.gameBoard.board]);
-		document.querySelector('.ship-wrapper').classList.toggle('flipped');
-	};
-
 	const onResetBoard = () => {
 		player.gameBoard.makeBoard();
 		player.gameBoard.getShips();
@@ -140,7 +132,7 @@ const Game = (props) => {
 						board={board}
 						isGameReady={isGameReady}
 						setGameReady={setGameReady}
-						onFlipShips={onFlipShips}
+						// onFlipShips={onFlipShips}
 						onPlaceShip={onPlaceShip}
 						onPlaceRandomly={onPlaceRandomly}
 						onResetBoard={onResetBoard}

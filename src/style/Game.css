@@ -137,9 +137,7 @@
   -webkit-user-drag: none !important;
   -webkit-user-select: none !important;
   -ms-user-select: none !important;
-}
-.ship-img-grid.vertical {
-  transform: translate(0%, 52%) scale(0.33) rotate(90deg);
+  /* opacity: 0; */
 }
 
 .light .cell .hit-png {
