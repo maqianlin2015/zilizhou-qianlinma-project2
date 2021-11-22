@@ -1,11 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "../style/Intro.css";
+import {useSelector, useDispatch} from "react-redux";
+import {changeAppStatus} from "../redux/actions";
 
-const Introduction = ({ setAppStatus }) => {
-  const onSkipIntro = () => {
-    setAppStatus("newGame");
-  };
+const Introduction = () => {
+  const newAppStatus = useSelector(state => state.newAppStatus);
+  const dispatch = useDispatch();
+
 
   return (
     <div className="fade">
@@ -51,7 +53,7 @@ const Introduction = ({ setAppStatus }) => {
           </p>
           <br></br>
           <br></br>
-          <button className="click-start-game-btn" onClick={onSkipIntro}>
+          <button className="click-start-game-btn" onClick={() => dispatch(changeAppStatus("newGame"))}>
             Click Here to Start Game
           </button>
         </div>
@@ -62,6 +64,6 @@ const Introduction = ({ setAppStatus }) => {
 
 export default Introduction;
 
-Introduction.propTypes = {
-  setAppStatus: PropTypes.func.isRequired,
-};
+// Introduction.propTypes = {
+//   setAppStatus: PropTypes.func.isRequired,
+// };

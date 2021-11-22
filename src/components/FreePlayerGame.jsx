@@ -3,8 +3,14 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import '../style/Game.css';
 import GameBoard from './GameBoard';
+import {useSelector, useDispatch} from "react-redux";
+import {changeAppStatus, changeWinner} from "../redux/actions";
 
 const FreePlayerGame = (props) => {
+	const newAppStatus = useSelector(state => state.newAppStatus);
+	const newWinner = useSelector(state => state.newWinner);
+	const dispatch = useDispatch();
+
 	const { player, opponent } = props;
 	const [isGameReady, setGameReady] = useState(true);
 	const [board, setBoard] = useState([...player.gameBoard.board]);
@@ -46,10 +52,10 @@ const FreePlayerGame = (props) => {
 		}
 	};
 
-	const onEndGame = (winner) => {
+	const onEndGame = (newWinner) => {
 		setTimeout(() => {
-			props.setWinner(winner);
-			props.setAppStatus('announcer');
+			dispatch(changeWinner(newWinner));
+			dispatch(changeAppStatus('announcer'));
 		}, 500);
 	};
 

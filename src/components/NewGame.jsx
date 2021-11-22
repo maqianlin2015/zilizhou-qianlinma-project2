@@ -1,18 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import '../style/Intro.css';
+import {useSelector, useDispatch} from "react-redux";
+import {changeAppStatus, changeWinner} from "../redux/actions";
 
-const NewGame = ({ setAppStatus, setWinner }) => {
+const NewGame = () => {
+	const newAppStatus = useSelector(state => state.newAppStatus);
+	const dispatch = useDispatch();
+  
 	const onStartNormalGame = () => {
-		setAppStatus('game');
-		setWinner(null);
+		dispatch(changeAppStatus("game"));
+		dispatch(changeWinner(null));
 	};
 
 	const onStartFreePlayerGame = () => {
-		setAppStatus('freeplayergame');
-		setWinner(null);
+		dispatch(changeAppStatus("freeplayergame"));
+		dispatch(changeWinner(null));
 	};
-
+  
 	return (
 		<div className="neon-btn">
 			<div className="">
@@ -32,7 +37,7 @@ const NewGame = ({ setAppStatus, setWinner }) => {
 
 export default NewGame;
 
-NewGame.propTypes = {
-	setAppStatus: PropTypes.func.isRequired,
-	setWinner: PropTypes.func.isRequired,
-};
+// NewGame.propTypes = {
+// 	setAppStatus: PropTypes.func.isRequired,
+// 	setWinner: PropTypes.func.isRequired,
+// };

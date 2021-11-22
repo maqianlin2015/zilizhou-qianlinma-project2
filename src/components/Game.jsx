@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from 'react';
-// import { CSSTransition } from 'react-transition-group';
 import PropTypes from 'prop-types';
 import '../style/Game.css';
 import GameBoard from './GameBoard';
+import {useSelector, useDispatch} from "react-redux";
+import {changeAppStatus, changeWinner} from "../redux/actions";
 
 const Game = (props) => {
+	const newAppStatus = useSelector(state => state.newAppStatus);
+	const newWinner = useSelector(state => state.newWinner);
+	const dispatch = useDispatch();
+
 	const { player, opponent } = props;
 	const [isGameReady, setGameReady] = useState(false);
 	const [board, setBoard] = useState([...player.gameBoard.board]);
@@ -49,7 +54,6 @@ const Game = (props) => {
 		const shipID = e.dataTransfer.getData('ship');
 		const ship = player.gameBoard.ships[shipID - 1];
 		player.gameBoard.placeShip(ship, x, y);
-		// console.table(board);
 		setBoard([...player.gameBoard.board]);
 	};
 
@@ -63,7 +67,6 @@ const Game = (props) => {
 		if (player.makeMove(opponent, x, y) === true) {
 			setOpponentBoard([...opponent.gameBoard.board]);
 			setEnemyShipCount(opponent.gameBoard.shipCount);
-			// console.table(opponentBoard);
 			if (opponent.gameBoard.isGameOver) {
 				onEndGame(player);
 			}
@@ -74,17 +77,17 @@ const Game = (props) => {
 	const onAIMove = () => {
 		opponent.makeAIMove(player, false);
 		setBoard([...player.gameBoard.board]);
-		// console.table(board);
 		if (player.gameBoard.isGameOver) {
 			onEndGame(opponent);
 		}
 	};
 
-	const onEndGame = (winner) => {
+	const onEndGame = (newWinner) => {
 		setTimeout(() => {
-			props.setWinner(winner);
-			props.setAppStatus('announcer');
+			dispatch(changeWinner(newWinner));
+			dispatch(changeAppStatus('announcer'));
 		}, 500);
+		// console.log(newWinner);
 	};
 
 	const handlePlayerShipDisplay = () => {
@@ -152,28 +155,3 @@ const Game = (props) => {
 };
 
 export default Game;
-
-Game.propTypes = {
-	player: PropTypes.object,
-	board: PropTypes.array,
-	setBoard: PropTypes.func,
-	opponent: PropTypes.object,
-	opponentBoard: PropTypes.array,
-	setOpponentBoard: PropTypes.func,
-	PlayerOne: PropTypes.object,
-	PlayerTwo: PropTypes.object,
-	gameReady: PropTypes.bool,
-	setGameReady: PropTypes.func,
-	winner: PropTypes.object,
-	setWinner: PropTypes.func,
-	setAppStatus: PropTypes.func,
-};
-
-Game.defaultProps = {
-	setBoard: () => {},
-	setOpponentBoard: () => {},
-	gameReady: false,
-	setGameReady: () => {},
-	setWinner: () => {},
-	setAppStatus: () => {},
-};
