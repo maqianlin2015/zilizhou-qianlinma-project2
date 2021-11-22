@@ -142,10 +142,12 @@
 
 .light .cell .hit-png {
   filter: hue-rotate(110deg);
+  z-index: 15; 
 } */
 
 .cell.hit .ship-img-grid {
   transform: translate(37%) scale(1);
+  z-index: 15; 
 }
 
 .cell.hit .ship-img-grid.vertical {
