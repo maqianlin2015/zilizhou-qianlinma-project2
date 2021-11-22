@@ -102,7 +102,6 @@ const Game = (props) => {
 			if (!startingCell.querySelector('.ship-img-grid')) {
 				const shipImg = document.createElement('img');
 				shipImg.src =
-					// eslint-disable-next-line no-undef
 					process.env.PUBLIC_URL + `/images/${owner.side}${ship.size}.png`;
 				shipImg.alt = `ship-${owner.side}${ship.size}`;
 				shipImg.classList.add(`ship-img-grid`);

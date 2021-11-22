@@ -5,18 +5,6 @@
   overflow: hidden;
 }
 
-.star-wars-intro {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  color: black;
-  font-family:Georgia, 'Times New Roman', Times, serif;
-  font-size: 180%;
-  font-weight: 300;
-  line-height: 100%;
-  perspective: 20px;
-}
-
 .crawl  {
   font-size: 25px;
   padding-left:5%;
@@ -52,7 +40,6 @@
 .click-start-game-btn:hover{
   box-shadow: 0px 0px 30px rgb(207, 126, 5);
 }
-
 
 .neon-btn {
   display: flex;

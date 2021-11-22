@@ -2,7 +2,6 @@ import React from 'react';
 import {useSelector, useDispatch} from "react-redux";
 import {changeAppStatus} from "../redux/actions";
 
-
 const Announcer = () => {
 	const newWinner = useSelector(state => state.newWinner);
 	const dispatch = useDispatch();

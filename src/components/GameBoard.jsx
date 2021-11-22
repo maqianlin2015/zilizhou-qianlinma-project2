@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const GameBoard = (props) => {
 	const { player, board, isGameReady } = props;
 	return (
@@ -91,7 +90,7 @@ const GameBoard = (props) => {
 											);
 										}
 									}
-									// AI board
+									// AI Board
 									else {
 										if (element === '•') {
 											return (

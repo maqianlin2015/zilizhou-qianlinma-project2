@@ -7,7 +7,6 @@ const Introduction = () => {
   const newAppStatus = useSelector(state => state.newAppStatus);
   const dispatch = useDispatch();
 
-
   return (
     <div className="fade">
       <section className="star-wars-intro">

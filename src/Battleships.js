@@ -58,19 +58,19 @@ export const GameBoard = (playerSide = 'human-player') => {
 		createShips: (playerSide = 'human-player') => {
 			if (playerSide === 'ai-player') {
 				return [
-					Ship('TIE-bomber', 2),
-					Ship('Star Destroyer', 3),
-					Ship('Star Destroyer', 3),
-					Ship('Super Star Destroyer', 4),
-					Ship('TIE-bomber', 5)
+					Ship('myShip1', 2),
+					Ship('myShip2', 3),
+					Ship('myShip3', 3),
+					Ship('myShip4', 4),
+					Ship('myShip5', 5)
 				];
 			} else {
 				return [
-					Ship('X-wing starfighter', 2),
-					Ship('Shuttle', 3),
-					Ship('Shuttle', 3),
-					Ship('CR90 corvette', 4),
-					Ship('MC80 Star Cruiser', 5),
+					Ship('opponentShip1', 2),
+					Ship('opponentShip2', 3),
+					Ship('opponentShip3', 3),
+					Ship('opponentShip14', 4),
+					Ship('opponentShip5', 5),
 				];
 			}
 		},
@@ -94,7 +94,6 @@ export const GameBoard = (playerSide = 'human-player') => {
 		},
 
 		checkPlacement: (ship = {}, xCord = 0, yCord = 0) => {
-			// console.log('Placement check');
 			xCord = parseFloat(xCord);
 			yCord = parseFloat(yCord);
 			return checkDirectionalShipPlacement(
@@ -115,7 +114,6 @@ export const GameBoard = (playerSide = 'human-player') => {
 				markShipArea('*', ship, gameBoard, xCord, yCord, BOARD_SIDE_SIZE);
 				ship.onBoard = true;
 				ship.coordinates = [parseFloat(xCord), parseFloat(yCord)];
-				// console.log(	`${ship.name}, ${ship.direction} --> ${ship.coordinates}`);
 				handleShipCount(gameBoard, FLEET_QUANTITY);
 				return true;
 			} else {

@@ -12,9 +12,6 @@ import { useSelector, useDispatch } from "react-redux";
 const App = () => {
 	let PlayerOne = CreatePlayer('human-player', 'human');
 	let PlayerTwo = CreatePlayer('ai-player', 'computer');
-	let timeout = 1000;
-
-
 	const newAppStatus = useSelector(state => state.newAppStatus);
 	const dispatch = useDispatch();
 
