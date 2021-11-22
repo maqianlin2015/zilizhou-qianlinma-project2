@@ -6,21 +6,13 @@ import Game from './components/Game';
 import FreePlayerGame from './components/FreePlayerGame';
 import Announcer from './components/Announcer';
 import './style/App.css';
-
-import { Provider } from "react-redux";
-import store from "../src/redux/store";
 import { useSelector, useDispatch } from "react-redux";
-import { changeAppStatus } from './redux/actions';
 
 
 const App = () => {
-
-	// const [appStatus, setAppStatus] = useState('intro');
-	// const [winner, setWinner] = useState(null);
 	let PlayerOne = CreatePlayer('human-player', 'human');
 	let PlayerTwo = CreatePlayer('ai-player', 'computer');
-	//update timeout from 2000 to 20//
-	let timeout = 20;
+	let timeout = 1000;
 
 
 	const newAppStatus = useSelector(state => state.newAppStatus);

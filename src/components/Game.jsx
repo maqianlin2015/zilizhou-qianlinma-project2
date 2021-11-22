@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
 import '../style/Game.css';
 import GameBoard from './GameBoard';
 import {useSelector, useDispatch} from "react-redux";
@@ -87,7 +86,6 @@ const Game = (props) => {
 			dispatch(changeWinner(newWinner));
 			dispatch(changeAppStatus('announcer'));
 		}, 500);
-		// console.log(newWinner);
 	};
 
 	const handlePlayerShipDisplay = () => {

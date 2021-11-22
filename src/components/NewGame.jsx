@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import '../style/Intro.css';
 import {useSelector, useDispatch} from "react-redux";
 import {changeAppStatus, changeWinner} from "../redux/actions";
@@ -36,8 +35,3 @@ const NewGame = () => {
 };
 
 export default NewGame;
-
-// NewGame.propTypes = {
-// 	setAppStatus: PropTypes.func.isRequired,
-// 	setWinner: PropTypes.func.isRequired,
-// };

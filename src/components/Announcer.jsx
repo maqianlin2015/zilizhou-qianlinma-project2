@@ -1,11 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import {useSelector, useDispatch} from "react-redux";
 import {changeAppStatus} from "../redux/actions";
 
 
 const Announcer = () => {
-	// console.log({newWinner});
 	const newWinner = useSelector(state => state.newWinner);
 	const dispatch = useDispatch();
 
@@ -27,9 +25,3 @@ const Announcer = () => {
 };
 
 export default Announcer;
-
-// Announcer.propTypes = {
-// 	winner: PropTypes.object,
-// 	// winner: PropTypes.object.isRequired,
-// 	setAppStatus: PropTypes.func.isRequired,
-// };

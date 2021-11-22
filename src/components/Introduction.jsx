@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import "../style/Intro.css";
 import {useSelector, useDispatch} from "react-redux";
 import {changeAppStatus} from "../redux/actions";
@@ -63,7 +62,3 @@ const Introduction = () => {
 };
 
 export default Introduction;
-
-// Introduction.propTypes = {
-//   setAppStatus: PropTypes.func.isRequired,
-// };

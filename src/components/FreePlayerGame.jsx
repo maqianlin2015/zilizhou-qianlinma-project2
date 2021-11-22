@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-// import { CSSTransition } from 'react-transition-group';
-import PropTypes from 'prop-types';
 import '../style/Game.css';
 import GameBoard from './GameBoard';
 import {useSelector, useDispatch} from "react-redux";
@@ -46,7 +44,6 @@ const FreePlayerGame = (props) => {
 	const onAIMove = () => {
 		opponent.makeAIMove(player, false);
 		setBoard([...player.gameBoard.board]);
-		// console.table(board);
 		if (player.gameBoard.isGameOver) {
 			onEndGame(opponent);
 		}
@@ -81,7 +78,6 @@ const FreePlayerGame = (props) => {
 			if (!startingCell.querySelector('.ship-img-grid')) {
 				const shipImg = document.createElement('img');
 				shipImg.src =
-					// eslint-disable-next-line no-undef
 					process.env.PUBLIC_URL + `/images/${owner.side}${ship.size}.png`;
 				shipImg.alt = `ship-${owner.side}${ship.size}`;
 				shipImg.classList.add(`ship-img-grid`);
@@ -107,28 +103,3 @@ const FreePlayerGame = (props) => {
 };
 
 export default FreePlayerGame;
-
-FreePlayerGame.propTypes = {
-	player: PropTypes.object,
-	board: PropTypes.array,
-	setBoard: PropTypes.func,
-	opponent: PropTypes.object,
-	opponentBoard: PropTypes.array,
-	setOpponentBoard: PropTypes.func,
-	PlayerOne: PropTypes.object,
-	PlayerTwo: PropTypes.object,
-	gameReady: PropTypes.bool,
-	setGameReady: PropTypes.func,
-	winner: PropTypes.object,
-	setWinner: PropTypes.func,
-	setAppStatus: PropTypes.func,
-};
-
-FreePlayerGame.defaultProps = {
-	setBoard: () => {},
-	setOpponentBoard: () => {},
-	gameReady: false,
-	setGameReady: () => {},
-	setWinner: () => {},
-	setAppStatus: () => {},
-};

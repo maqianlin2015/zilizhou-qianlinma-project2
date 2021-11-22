@@ -1,6 +1,5 @@
-/* eslint-disable no-undef */ // process.env
 import React from 'react';
-import PropTypes from 'prop-types';
+
 
 const GameBoard = (props) => {
 	const { player, board, isGameReady } = props;
@@ -10,29 +9,7 @@ const GameBoard = (props) => {
 			<div className="outer-wrapper">
 				{/* {BOARD} */}
 				<div className="board-wrapper">
-					<div className="column-description">
-						{/* {board.map((arr, i) => {
-							return (
-								<div className="numbers" key={[i + 1]}>
-									{' '}
-									{[i + 1]}{' '}
-								</div>
-							);
-						})} */}
-					</div>
 					<div className="inner-wrapper">
-						{/* <div className={`${player.side} row-description`}>
-							{' '}
-							{board.map((arr, i) => {
-								return (
-									<div className="letters" key={`letter${i}`}>
-										{' '}
-										{(i + 10).toString(36)}{' '}
-									</div>
-								);
-							})}
-						</div> */}
-						{/* grid */}
 						<div className={`${player.side} grid-wrapper ${player.type}`}>
 							{player.gameBoard.board.map((arr, j) =>
 								arr.map((element, i) => {
@@ -214,25 +191,3 @@ const GameBoard = (props) => {
 };
 
 export default GameBoard;
-
-GameBoard.propTypes = {
-	isGameReady: PropTypes.bool,
-	player: PropTypes.object.isRequired,
-	board: PropTypes.array.isRequired,
-	onMakeMove: PropTypes.func,
-	onPlaceShip: PropTypes.func,
-	onFlipShips: PropTypes.func,
-	onPlaceRandomly: PropTypes.func,
-	onResetBoard: PropTypes.func,
-	onStartGame: PropTypes.func,
-};
-
-GameBoard.defaultProps = {
-	isGameReady: false,
-	onMakeMove: () => {},
-	onPlaceShip: () => {},
-	onFlipShips: () => {},
-	onPlaceRandomly: () => {},
-	onResetBoard: () => {},
-	onStartGame: () => {},
-};

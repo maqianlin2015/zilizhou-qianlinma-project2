@@ -8,7 +8,6 @@ import {
 } from './helperFunctions';
 
 const BOARD_SIDE_SIZE = 10;
-// 之后这里改成5！别忘了
 const FLEET_QUANTITY = 5;
 
 export const Ship = (name = 'ship', size = 1, direction = 'horizontal') => {
